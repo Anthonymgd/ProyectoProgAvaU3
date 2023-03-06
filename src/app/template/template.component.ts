@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { SessionService } from '../session.service';
+import { SessionService } from '../services/session.service';
 import Swal from 'sweetalert2';
 
 
