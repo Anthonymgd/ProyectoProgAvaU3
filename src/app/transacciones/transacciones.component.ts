@@ -122,9 +122,7 @@ export class TransaccionesComponent implements OnInit {
           'El proceso de compra ha sido realizado con éxito.',
           'success'
         );
-      } else
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel;
+      }
     });
   }
 
@@ -149,9 +147,7 @@ export class TransaccionesComponent implements OnInit {
           'Se ha rechazado la compra correctamente. El proceso se canceló.',
           'success'
         );
-      } else
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel;
+      }
     });
   }
 }

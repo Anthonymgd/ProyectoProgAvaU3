@@ -6,10 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import {
-  Router,
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
+  Router
 } from '@angular/router';
 
 import { SessionService } from '../services/session.service';
@@ -40,11 +37,6 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     this.buildForm();
-  }
-
-  onSubmit() {
-    console.log(this.loginForm.value);
-    console.log("toucherd", this.loginForm.markAsTouched());
   }
 
   private buildForm() {

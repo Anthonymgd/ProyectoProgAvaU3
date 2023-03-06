@@ -114,10 +114,7 @@ export class ComprobanteComponent implements OnInit {
             console.log(err);
           }
         );
-      } else (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      )
+      }
     });
     this.registerForm.reset();
   }

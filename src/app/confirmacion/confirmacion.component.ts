@@ -113,8 +113,7 @@ export class ConfirmacionComponent implements OnInit {
           'Usted ha aceptado el pedido correctamente, el cliente será notificado y deberá subir el comprobante de pago.',
           'success'
         );
-      } else result.dismiss === Swal.DismissReason.cancel;
-      /* Read more about handling dismissals below */
+      }
     });
   }
 
@@ -140,8 +139,7 @@ export class ConfirmacionComponent implements OnInit {
           'Usted ha cancelado el pedido correctamente, el proceso se canceló.',
           'success'
         );
-      } else result.dismiss === Swal.DismissReason.cancel;
-      /* Read more about handling dismissals below */
+      }
     });
   }
 }
