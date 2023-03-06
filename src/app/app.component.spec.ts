@@ -44,14 +44,14 @@ describe('CedulaValidatorDirective', () => {
 
   it('should return null for a valid cedula', () => {
     const control = component.form.controls['cedula'];
-    control.setValue('4020068156');
+    control.setValue('2350751315');
     const validator = new CedulaValidatorDirective();
-    expect(validator.validate(control)).toEqual({ 'cedulaInvalida': true });
+    expect(validator.validate(control)).toEqual(null);
   });
 
   it('should return cedulaInvalida for an invalid cedula', () => {
     const control = component.form.controls['cedula'];
-    control.setValue('1234567890');
+    control.setValue('1111111111');
     const validator = new CedulaValidatorDirective();
     expect(validator.validate(control)).toEqual({ 'cedulaInvalida': true });
   });

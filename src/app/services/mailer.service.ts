@@ -1,9 +1,20 @@
-import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { Injectable, NgModule } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http'
+
 
 @Injectable({
   providedIn: 'root'
 })
+
+@NgModule({
+  imports: [
+    HttpClientModule
+  ],
+  providers: [
+    MailerService
+  ]
+})
+
 export class MailerService {
 
   constructor(private httpreq:HttpClient) {  } 
