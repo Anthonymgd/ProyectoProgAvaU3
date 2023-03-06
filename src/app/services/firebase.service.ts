@@ -16,22 +16,22 @@ export class FirebaseService {
   constructor(private http: HttpClient) {}
 
   registrarPersona(persona: Persona) {
-    return this.http.post('http://52.87.220.184:8080/persona', persona ,this.httpOptions);
+    return this.http.post('http://100.25.196.54:8080/persona', persona ,this.httpOptions);
   }
 
   verTodo() {
-    return this.http.get<[any]>('http://52.87.220.184:8080/persona', this.httpOptions);
+    return this.http.get<[any]>('http://100.25.196.54:8080/persona', this.httpOptions);
   }
 
   confirmacionPedido(id: number, estado1: String, track: String){
-    return this.http.put<Persona>(`http://52.87.220.184:8080/estado1/${id}`, { estado1, track } , this.httpOptions);
+    return this.http.put<Persona>(`http://100.25.196.54:8080/estado1/${id}`, { estado1, track } , this.httpOptions);
   }
 
   confirmacionComprobante(id: number, estado2: String){
-    return this.http.put<Persona>(`http://52.87.220.184:8080/estado2/${id}`, { estado2 } , this.httpOptions);
+    return this.http.put<Persona>(`http://100.25.196.54:8080/estado2/${id}`, { estado2 } , this.httpOptions);
   }
 
   enviarComprobante(id: number, imagen: String){
-    return this.http.put<Persona>(`http://52.87.220.184:8080/enviarComprobante/${id}`, {imagen}, this.httpOptions);
+    return this.http.put<Persona>(`http://100.25.196.54:8080/enviarComprobante/${id}`, {imagen}, this.httpOptions);
   }
 }
