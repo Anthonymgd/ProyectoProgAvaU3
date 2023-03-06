@@ -47,7 +47,7 @@
 
                         </td>
                         <td *ngIf="persona.estado2 == 'pendiente' && estado == 'pendiente'">
-                            <a title="Aceptar pedido" class="edit" data-toggle="modal" (click)="aceptar(persona.id)"><i
+                            <a title="Aceptar pedido" class="edit" data-toggle="modal" (click)="aceptar(persona.id, persona.email)"><i
                                     class="material-icons text-success">check_box</i></a>
                             <a title="Cancelar pedido" class="delete" data-toggle="modal"
                                 (click)="cancelar(persona.id)">
