@@ -9,6 +9,7 @@
                 <div class="col-6 form-group">
                     <select [(ngModel)]="animalSeleccionado" (change)="addAnimal()" name="ganado" class="form-control"
                         id="productName">
+                        <option value="-1" disabled selected>--Selecione una opción--</option>
                         <option *ngFor="let animal of ganado" [ngValue]="animal">{{animal.nombre}} {{animal.precio}}$</option>
                     </select>
             </div>
