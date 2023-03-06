@@ -38,7 +38,7 @@
           <td class="text-center" *ngIf="persona.estado1 === estado">{{persona.creacion}}</td>
           <td class="text-center" *ngIf="persona.estado1 === estado">{{persona.total}}$</td>
           <td *ngIf="persona.estado1 == '' && estado == ''">
-            <a title="Aceptar pedido" class="edit" data-toggle="modal" (click)="aceptar(persona.id, persona.track)"><i
+            <a title="Aceptar pedido" class="edit" data-toggle="modal" (click)="aceptar(persona.id, persona.track, persona.email)"><i
                 class="material-icons text-success">check_box</i></a>
             <a title="Cancelar pedido" class="delete" data-toggle="modal" (click)="cancelar(persona.id, persona.track)">
               <i class="material-icons">cancel</i></a>
