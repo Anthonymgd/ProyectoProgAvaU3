@@ -7,10 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  animales = [
-    { nombre: 'Vaca', precio: 410, cantidad: 1 },
-  ];
-
+  animales: any[] = [];
+  
   ganado = [
     { nombre: 'Vaca', precio: 410, cantidad: 1 },
     { nombre: 'Toro', precio: 400, cantidad: 1 },
@@ -28,11 +26,15 @@ export class ShoppingCartComponent implements OnInit {
 
   @Output() attributeChanged = new EventEmitter<number>();
   
+  constructor() { 
+  }
+
   total = 0;
   animalSeleccionado: any;
   animal = { nombre: '', precio: 0, cantidad: 1 };
 
   ngOnInit() {
+    this.animalSeleccionado = -1;
     this.calculateTotal();
   }
 
